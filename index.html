@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liquor Store App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Login Page -->
+    <section id="loginPage">
+        <h2>Customer Login</h2>
+        <!-- Logo Container -->
+        <div id="logoContainer">
+            <img src="app1.png" alt="Logo">
+        </div>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <!-- <p id="loginError" class="hidden" style="color: red;">Invalid username or password.</p> -->
+    </section>
+
+    <!-- Main App (Hidden Initially) -->
+    <div id="mainApp" class="hidden">
+        <!-- Header Section -->
+        <header>
+            <h1>Liquor Store</h1>
+            <button id="adminBtn">Admin Login</button>
+        </header>
+
+        <!-- Category Selection -->
+        <section id="categories">
+            <h2>Select a Category</h2>
+            <div class="category-list">
+                <button class="category" data-category="Wines">Wines</button>
+                <button class="category" data-category="Spirits">Spirits</button>
+                <button class="category" data-category="Tequila">Tequila</button>
+                <button class="category" data-category="Soft Drinks">Soft Drinks</button>
+                <button class="category" data-category="Vodka">Vodka</button>
+                <button class="category" data-category="Brandy">Brandy</button>
+                <button class="category" data-category="Whiskey">Whiskey</button>
+            </div>
+        </section>
+
+        <!-- Products Display -->
+        <section id="products" class="hidden">
+            <h2 id="product-title"></h2>
+            <div class="product-list"></div>
+            <button id="backBtn">Back to Categories</button>
+        </section>
+
+        <!-- Admin Login Modal -->
+        <div id="adminModal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Admin Login</h2>
+                <input type="password" id="adminPass" placeholder="Enter Admin Password">
+                <button id="loginAdmin">Login</button>
+            </div>
+        </div>
+
+        <!-- Admin Panel -->
+        <section id="adminPanel" class="hidden">
+            <h2>Stock Management</h2>
+            <!-- Add the Updates Button -->
+            <button id="updatesBtn">View Updates</button>
+            <!-- Add the Updates Section -->
+            <div id="updatesSection" class="hidden"></div>
+            <div id="stockList"></div>
+            <button id="logoutAdmin">Logout</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
